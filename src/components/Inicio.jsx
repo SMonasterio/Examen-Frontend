@@ -20,6 +20,12 @@ class Inicio extends React.Component {
         }
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.contador !== this.state.contador) {
+            this.state.historialSelecciones.push(this.state.seleccionAnterior);
+        }
+    }
+
     
     handleClick = (evento) => {
     const id = evento.target.id;
@@ -128,7 +134,13 @@ class Inicio extends React.Component {
                 />
                 <div className="Opciones">
                 <h3 className="seleccionAnterior">Selección anterior: {this.state.seleccionAnterior}</h3>
-                <Historial />
+                <Historial
+                    historialSelecciones = {this.state.historialSelecciones.map(
+                        (item, index) => (
+                            <li key={index}>{item}</li>
+                        ),
+                    datosJson[this.state.contador].id
+                )}/>
                 </div>
             </div>
         );
