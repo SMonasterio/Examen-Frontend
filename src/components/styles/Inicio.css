@@ -1,0 +1,24 @@
+.principal{
+    margin: 30px 100px;
+    width:500px;
+    height:500px;
+    border: solid 2px black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.principioHistoria{
+   width: 100%;
+   padding: 25px 20px;
+}
+
+.botonOpciones{
+    width: 100%;
+}
+
+.seleccionAnterior{
+    font-size: 20px;
+}
